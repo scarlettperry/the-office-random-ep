@@ -5,6 +5,19 @@ import Button from './Button.js'
 
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state={
+      office_ep: ""
+    }
+  }
+
+  // componentDidMount(){
+  //   fetch()
+  //     .then()
+  //     .then()
+  // }
+
   render() {
     return (
       <div className="App">
