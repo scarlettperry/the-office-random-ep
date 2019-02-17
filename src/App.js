@@ -4,11 +4,7 @@ import Header from './Header.js'
 import Button from './Button.js'
 import EpisodeReveal from './EpisodeReveal.js'
 
-const API_KEY = process.env.THE_MOVIE_DB_API
-
-
-// const API_KEY = process.env.REACT_APP_GOOGLE_API
-
+const API_KEY = process.env.REACT_APP_THE_MOVIE_DB_API
 
 class App extends Component {
 
