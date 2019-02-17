@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Button = () => {
+const Button = (props) => {
+  // console.log(props);
   return(
     <div>
-      <button>Give Me An Episode!</button>
+      <button onClick={props.randomEpClick}>Give Me An Episode!</button>
     </div>
   )
 }
