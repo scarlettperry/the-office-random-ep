@@ -23,7 +23,7 @@ class App extends Component {
 
     let episode_num
     let random_episode_num
-
+    
     if (season_num === 1) {
       episode_num = Array.from({length: 6}, (v, k) => k+1)
       random_episode_num = episode_num[Math.floor(Math.random() * episode_num.length)]

@@ -4,7 +4,7 @@ import headerImage from './images/header_image.png'
 const Header = () => {
   return (
     <div>
-      <img src={headerImage} alt="the office"/>
+      <img className="office-img" src={headerImage} alt="the office"/>
     </div>
   )
 }
