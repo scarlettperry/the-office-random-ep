@@ -4,7 +4,7 @@ const Button = (props) => {
   // console.log(props);
   return(
     <div>
-      <button onClick={props.randomEpClick}>Give Me An Episode!</button>
+      <button className="give-random-ep-bttn" onClick={props.randomEpClick}>Give Me An Episode!</button>
     </div>
   )
 }
