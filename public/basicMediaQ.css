@@ -2,10 +2,10 @@
 above 500px, text is red
 above 800px, background is blue*/
 
-@media screen and (min-width: 500px){
+/* @media screen and (min-width: 500px){
   body {color: red;}
 }
 
 @media screen and (min-width: 800px) {
   body {background-color: blue;}
-}
+} */

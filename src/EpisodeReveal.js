@@ -3,9 +3,11 @@ import React from 'react'
 const EpisodeReveal = (props) => {
   return (
     <div>
-      <p>Season: {props.details["episode_season"]}</p>
-      <p>Episode Num: {props.details["episode_number"]}</p>
-      <p>Episode Title: {props.details["episode_name"]}</p>
+    {/*
+      <p>{props.details["episode_name"]}</p>
+      <p>Season {props.details["episode_season"]} Episode {props.details["episode_number"]}</p>
+      <p>Description {props.details["episode_overview"]}</p>
+    */}
     </div>
   )
 }

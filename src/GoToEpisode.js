@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = (props) => {
+const GoToEpisode = (props) => {
   // console.log(props);
   return(
     <div>
@@ -9,4 +9,4 @@ const Button = (props) => {
   )
 }
 
-export default Button
+export default GoToEpisode

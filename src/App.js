@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 import './App.css';
-import Header from './Header.js'
-import Button from './Button.js'
-import EpisodeReveal from './EpisodeReveal.js'
+// import Header from './Header.js'
+import Home from './Home.js'
+import GoToEpisode from './GoToEpisode.js'
+import GoToChoreWheel from './GoToChoreWheel.js'
+// import EpisodeReveal from './EpisodeReveal.js'
 
 const API_KEY = process.env.REACT_APP_THE_MOVIE_DB_API
 
@@ -13,7 +19,8 @@ class App extends Component {
     this.state={
       episode_number: "",
       episode_season: "",
-      episode_name: ""
+      episode_name: "",
+      episode_overview: ""
     }
   }
 
@@ -23,7 +30,7 @@ class App extends Component {
 
     let episode_num
     let random_episode_num
-    
+
     if (season_num === 1) {
       episode_num = Array.from({length: 6}, (v, k) => k+1)
       random_episode_num = episode_num[Math.floor(Math.random() * episode_num.length)]
@@ -61,24 +68,39 @@ class App extends Component {
       .then(data => this.setState({
         episode_number: data["episode_number"],
         episode_season: data["season_number"],
-        episode_name: data["name"]
+        episode_name: data["name"],
+        episode_overview: data["overview"]
       }))
   }
 
   render() {
     console.log(this.state);
     return (
-      <div className="App">
-      <Header />
-      <Button
-        randomEpClick={this.randomEpClick}
-      />
-      <EpisodeReveal details={this.state}/>
-      </div>
-    );
+      <Router>
+        <React.Fragment>
+          <div className="App">
+          {/*
+            <Header />
+            <Button
+            randomEpClick={this.randomEpClick}
+            />
+            <EpisodeReveal details={this.state}/>
+
+          */}
+            <Route exact path = "/" render = {Home} />
+            <Route exact path = "/random-ep" render = {GoToEpisode} />
+            <Route exact path = "/chore-wheel" render = {GoToChoreWheel} />
+          </div>
+        </React.Fragment>
+      </Router>
+    )
   }
 
 
 }
 
 export default App;
+
+
+// the home page - 3 buttons >> give me an episode , spin the chore wheel, personal account
+//set up routers here
