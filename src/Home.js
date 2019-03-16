@@ -1,15 +1,17 @@
 import React from 'react'
+import Header from './Header.js'
 import {Link} from 'react-router-dom'
 
 const Home = (props) => {
   // console.log(props);
   return(
     <div>
+    <Header />
     <Link to="/random-ep">
-      <button>Give Me An Episode!</button>
+      <button>Random Episode Generator</button>
     </Link>
     <Link to="/chore-wheel">
-      <button>Spin the chore wheel!</button>
+      <button>Chore Wheel</button>
     </Link>
     </div>
   )

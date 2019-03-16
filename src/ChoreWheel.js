@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GoToChoreWheel = (props) => {
+const ChoreWheel = (props) => {
   // console.log(props);
   return(
     <div>
@@ -9,4 +9,4 @@ const GoToChoreWheel = (props) => {
   )
 }
 
-export default GoToChoreWheel
+export default ChoreWheel
